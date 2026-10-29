@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laban web studio - leave-behind sheet</title>
+<meta name="robots" content="noindex">
+<style>
+    @page { size: A4; margin: 12mm; }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        color: #0f172a;
+        background: #e2e8f0;
+        line-height: 1.45;
+    }
+
+    .sheet {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 10mm auto;
+        padding: 14mm;
+        background: #fff;
+        box-shadow: 0 6px 24px rgba(15, 23, 42, 0.18);
+    }
+
+    .top { display: flex; align-items: flex-start; gap: 12px; border-bottom: 3px solid #0f172a; padding-bottom: 12px; }
+
+    .mark {
+        display: grid; place-items: center;
+        width: 44px; height: 44px; flex: none;
+        border-radius: 12px; background: #0f172a; color: #fff;
+        font-weight: 800; font-size: 1.1rem;
+    }
+
+    .who { flex: 1 1 auto; }
+    .who strong { display: block; font-size: 1.25rem; letter-spacing: -0.01em; }
+    .who span { font-size: 0.82rem; color: #475569; }
+
+    .contact-block { text-align: right; font-size: 0.78rem; color: #475569; }
+    .contact-block strong { display: block; font-size: 0.95rem; color: #0f172a; }
+
+    h1 { margin: 16px 0 8px; font-size: 1.6rem; line-height: 1.15; letter-spacing: -0.01em; }
+    .pitch { margin: 0 0 6px; font-size: 0.92rem; color: #475569; }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+
+    .box { border: 1px solid #e2e8f0; border-radius: 10px; padding: 10px 12px; }
+    .box h2 { margin: 0 0 5px; font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.06em; color: #0d9488; }
+    .box ul { margin: 0; padding-left: 15px; font-size: 0.83rem; color: #334155; }
+    .box li { margin-bottom: 3px; }
+
+    table.prices { width: 100%; border-collapse: collapse; margin-top: 4px; }
+    table.prices th, table.prices td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #e2e8f0; font-size: 0.86rem; }
+    table.prices th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; }
+    table.prices td.amount { text-align: right; font-weight: 800; white-space: nowrap; }
+    table.prices tr.best td { background: #f0fdfa; }
+    table.prices tr.best td:first-child { border-left: 3px solid #0d9488; }
+
+    .bottom { display: flex; gap: 14px; align-items: center; margin-top: 14px; padding-top: 12px; border-top: 1px solid #e2e8f0; }
+
+    .qr { flex: none; width: 84px; }
+    .qr svg, .qr img { width: 84px; height: 84px; display: block; }
+    .qr-note { font-size: 0.72rem; color: #64748b; text-align: center; margin: 2px 0 0; }
+
+    .steps { flex: 1 1 auto; }
+    .steps h2 { margin: 0 0 4px; font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.06em; color: #0d9488; }
+    .steps ol { margin: 0; padding-left: 16px; font-size: 0.83rem; color: #334155; }
+    .steps li { margin-bottom: 2px; }
+
+    .wa {
+        margin-top: 10px;
+        background: #0f172a;
+        color: #fff;
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 0.86rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .wa strong { font-size: 1rem; }
+
+    .fine { margin: 6px 0 0; font-size: 0.7rem; color: #94a3b8; }
+
+    @media print {
+        body { background: #fff; }
+        .sheet { margin: 0; box-shadow: none; width: auto; min-height: 0; padding: 0; }
+        .print-hint { display: none; }
+    }
+
+    .print-hint {
+        max-width: 210mm;
+        margin: 0 auto 6mm;
+        font-size: 0.85rem;
+        color: #475569;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<p class="print-hint">Print this, or use your phone's share menu and choose Print, then Save as PDF.</p>
+
+<div class="sheet">
+
+    <div class="top">
+        <span class="mark" aria-hidden="true">L</span>
+        <div class="who">
+            <strong>Laban</strong>
+            <span>Websites for small businesses · Nairobi</span>
+        </div>
+        <div class="contact-block">
+            <strong>0703 511 022</strong>
+            WhatsApp and calls<br>
+            sugutlaban4-lgtm.github.io/laban-web-studio
+        </div>
+    </div>
+
+    <h1>Your customers are already on WhatsApp. Give them something to open.</h1>
+    <p class="pitch">One fast page with your prices, photos and location, where every button sends the customer to your WhatsApp with the order already written. Built for a phone on 3G, live in three days.</p>
+
+    <div class="grid">
+        <div class="box">
+            <h2>What you get</h2>
+            <ul>
+                <li>Your products or services and their prices</li>
+                <li>Photos, opening hours, directions</li>
+                <li>Order and booking buttons that open WhatsApp</li>
+                <li>Your own link to put on status and Facebook</li>
+                <li>Found on Google when someone searches your shop</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h2>Why it works</h2>
+            <ul>
+                <li>Under 1MB, so it opens on a slow phone</li>
+                <li>Works offline once opened</li>
+                <li>No data bundles wasted on videos</li>
+                <li>You keep the files and the domain</li>
+                <li>Paid by M-Pesa, receipt every time</li>
+            </ul>
+        </div>
+    </div>
+
+    <table class="prices">
+        <thead>
+            <tr><th>Package</th><th>What is in it</th><th class="amount">Price</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>One page</strong></td>
+                <td>One page, prices, photos, WhatsApp buttons</td>
+                <td class="amount">KSh 6,000</td>
+            </tr>
+            <tr class="best">
+                <td><strong>Business site</strong></td>
+                <td>Five pages, full catalogue, orders to WhatsApp, .co.ke domain, Google setup</td>
+                <td class="amount">KSh 12,000</td>
+            </tr>
+            <tr>
+                <td><strong>Shop with orders</strong></td>
+                <td>Everything above, plus stock, delivery zones and an owner dashboard</td>
+                <td class="amount">KSh 20,000</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="fine">Half to start, half when you are happy. Up-keep KSh 500 a month for hosting and small changes. Cancel any time and the site stays yours.</p>
+
+    <div class="bottom">
+        <div class="qr">
+            <img src="assets/qr-studio.svg" alt="QR code to the samples">
+            <p class="qr-note">Scan for samples</p>
+        </div>
+        <div class="steps">
+            <h2>How it goes</h2>
+            <ol>
+                <li>You send your name, prices and three photos.</li>
+                <li>I build in three days and send you the link.</li>
+                <li>You say what to change, we fix it the same day.</li>
+                <li>You pay, it goes live, I help you onto Google.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="wa">
+        <span>Send one message: your business name and what you sell.</span>
+        <strong>0703 511 022</strong>
+    </div>
+
+</div>
+
+</body>
+</html>

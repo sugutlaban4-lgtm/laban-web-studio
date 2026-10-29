@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quote and agreement - Laban web studio</title>
+<meta name="robots" content="noindex">
+<style>
+    @page { size: A4; margin: 11mm; }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        color: #0f172a;
+        background: #e2e8f0;
+        line-height: 1.5;
+    }
+
+    .sheet {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 10mm auto;
+        padding: 12mm;
+        background: #fff;
+        box-shadow: 0 6px 24px rgba(15, 23, 42, 0.18);
+    }
+
+    .toolbar {
+        max-width: 210mm;
+        margin: 0 auto 6mm;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .toolbar button {
+        padding: 10px 16px;
+        border-radius: 9px;
+        border: 1px solid #cbd5e1;
+        background: #fff;
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .toolbar button.go { background: #0d9488; border-color: #0d9488; color: #fff; }
+
+    .top { display: flex; justify-content: space-between; gap: 16px; border-bottom: 3px solid #0f172a; padding-bottom: 9px; }
+    .top h1 { margin: 0; font-size: 1.4rem; letter-spacing: -0.01em; }
+    .top p { margin: 2px 0 0; font-size: 0.8rem; color: #475569; }
+    .top .right { text-align: right; font-size: 0.8rem; color: #475569; }
+
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; margin: 12px 0; }
+
+    .row { display: grid; gap: 3px; }
+    .row label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; font-weight: 700; }
+
+    input[type="text"], input[type="date"], input[type="number"], select, textarea {
+        width: 100%;
+        padding: 8px 9px;
+        font-size: 0.9rem;
+        font-family: inherit;
+        color: #0f172a;
+        border: 1px solid #cbd5e1;
+        border-radius: 7px;
+        background: #fff;
+    }
+
+    textarea { min-height: 54px; resize: vertical; }
+
+    table { width: 100%; border-collapse: collapse; margin: 4px 0 8px; }
+    th, td { text-align: left; padding: 6px 6px; border-bottom: 1px solid #e2e8f0; font-size: 0.88rem; vertical-align: top; }
+    th { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; }
+    td.amount, th.amount { text-align: right; white-space: nowrap; }
+
+    .totals { margin-left: auto; width: 60mm; }
+    .totals div { display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.85rem; }
+    .totals div.grand { border-top: 2px solid #0f172a; margin-top: 4px; padding-top: 7px; font-weight: 800; font-size: 0.98rem; }
+
+    h2 { margin: 12px 0 4px; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.07em; color: #0d9488; }
+
+    ul.terms { margin: 0; padding-left: 15px; font-size: 0.79rem; color: #334155; }
+    ul.terms li { margin-bottom: 2px; }
+
+    .sign { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px; }
+    .sign div { border-top: 1px solid #0f172a; padding-top: 6px; font-size: 0.76rem; color: #475569; }
+
+    .foot { margin-top: 12px; font-size: 0.72rem; color: #94a3b8; }
+
+    @media print {
+        body { background: #fff; }
+        .sheet { margin: 0; box-shadow: none; width: auto; min-height: 0; padding: 0; }
+        .toolbar { display: none; }
+        input, select, textarea { border: 0; border-bottom: 1px solid #cbd5e1; border-radius: 0; padding: 2px 0; }
+    }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+    <button type="button" class="go" id="printBtn">Print or save as PDF</button>
+    <button type="button" id="clearBtn">Clear the form</button>
+</div>
+
+<div class="sheet" id="sheet">
+
+    <div class="top">
+        <div>
+            <h1>Website quote and agreement</h1>
+            <p>Laban · websites for small businesses · Nairobi</p>
+        </div>
+        <div class="right">
+            <p><strong>0703 511 022</strong></p>
+            <p>WhatsApp and calls</p>
+        </div>
+    </div>
+
+    <div class="fields">
+        <div class="row">
+            <label for="client">Client business</label>
+            <input type="text" id="client" placeholder="e.g. Mwangaza Hardware">
+        </div>
+        <div class="row">
+            <label for="owner">Owner name and phone</label>
+            <input type="text" id="owner" placeholder="e.g. Peter Kimani, 0722 000 000">
+        </div>
+        <div class="row">
+            <label for="date">Date</label>
+            <input type="date" id="date">
+        </div>
+        <div class="row">
+            <label for="package">Package</label>
+            <select id="package">
+                <option value="6000">One page, KSh 6,000</option>
+                <option value="12000" selected>Business site, KSh 12,000</option>
+                <option value="20000">Shop with orders, KSh 20,000</option>
+                <option value="0">Something else, written below</option>
+            </select>
+        </div>
+    </div>
+
+    <h2>Scope</h2>
+    <table>
+        <thead>
+            <tr><th>What is included</th><th class="amount">Price</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" id="scope" value="Website built and delivered, mobile first, with prices, photos, location and WhatsApp order buttons.">
+                </td>
+                <td class="amount" id="scopeAmount">KSh 12,000</td>
+            </tr>
+            <tr>
+                <td>Domain name, first year (optional)</td>
+                <td class="amount"><input type="number" id="domain" value="0" min="0" step="500" style="text-align:right;max-width:34mm"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="totals">
+        <div><span>Total</span><span id="total">KSh 12,000</span></div>
+        <div><span>Paid today (half)</span><span id="deposit">KSh 6,000</span></div>
+        <div class="grand"><span>Balance on approval</span><span id="balance">KSh 6,000</span></div>
+    </div>
+
+    <div class="fields">
+        <div class="row">
+            <label for="start">Work starts</label>
+            <input type="date" id="start">
+        </div>
+        <div class="row">
+            <label for="deliver">Draft ready by</label>
+            <input type="date" id="deliver">
+        </div>
+    </div>
+
+    <h2>What the client provides</h2>
+    <ul class="terms">
+        <li>Business name, services or products, and the prices to show.</li>
+        <li>Two to three photographs, or a note saying to use plain pictures instead.</li>
+        <li>Location, opening hours and the phone number for orders.</li>
+        <li>Replies to the draft within three days, so the delivery date holds.</li>
+    </ul>
+
+    <h2>Terms</h2>
+    <ul class="terms">
+        <li>Half is paid before work starts, the balance on approval. M-Pesa, Pochi la Biashara, receipt for each payment.</li>
+        <li>Two rounds of changes are included. Further changes are quoted before any work.</li>
+        <li>The client owns the finished site, its content, and the domain registered in their name.</li>
+        <li>Up-keep, if wanted, is KSh 500 a month for hosting and small edits. Stopping it leaves the site online and unchanged.</li>
+        <li>Content the client supplies stays the client's responsibility, including rights to photographs.</li>
+    </ul>
+
+    <div class="sign">
+        <div>Client signature and date</div>
+        <div>Laban, signature and date</div>
+    </div>
+
+    <p class="foot">Prepared by Laban · 0703 511 022 · This sheet is the whole agreement, no other document applies.</p>
+
+</div>
+
+<script>
+(function () {
+    const money = n => "KSh " + Number(n || 0).toLocaleString("en-KE");
+    const $ = id => document.getElementById(id);
+
+    function refresh() {
+        const base = Number($("package").value) || 0;
+        const domain = Number($("domain").value) || 0;
+        const total = base + domain;
+        $("scopeAmount").textContent = money(base);
+        $("total").textContent = money(total);
+        $("deposit").textContent = money(Math.round(total / 2));
+        $("balance").textContent = money(total - Math.round(total / 2));
+    }
+
+    ["package", "domain"].forEach(id => $(id).addEventListener("input", refresh));
+    refresh();
+
+    const today = new Date().toISOString().slice(0, 10);
+    if (!$("date").value) $("date").value = today;
+
+    $("printBtn").addEventListener("click", () => window.print());
+
+    $("clearBtn").addEventListener("click", () => {
+        ["client", "owner", "start", "deliver"].forEach(id => $(id).value = "");
+        $("domain").value = "0";
+        $("date").value = today;
+        refresh();
+    });
+})();
+</script>
+
+</body>
+</html>
