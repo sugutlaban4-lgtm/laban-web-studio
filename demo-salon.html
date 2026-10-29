@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow Barber and Spa - sample site by Laban</title>
+<meta name="description" content="Sample small business website: service price list and WhatsApp booking for a barber shop and spa.">
+<meta name="theme-color" content="#7c2d12">
+<link rel="stylesheet" href="assets/studio.css">
+</head>
+<body>
+
+<p class="demo-banner">
+    Sample site. This is a made-up shop, built to show what yours could look like.
+    <a href="index.html">See the offer &rarr;</a>
+</p>
+
+<header class="shop-top" style="background:#7c2d12">
+    <div class="wrap bar-in">
+        <span class="mark" aria-hidden="true" style="background:#fdba74;color:#7c2d12">G</span>
+        <span class="bar-name">Glow Barber &amp; Spa<small>Ngong Road · Nairobi</small></span>
+        <a class="btn btn-primary" style="margin-left:auto;background:#fdba74;color:#7c2d12" href="#book">Book</a>
+    </div>
+</header>
+
+<main>
+
+    <section class="shop-hero">
+        <div class="wrap">
+            <h1>Cut on time. Book in two taps.</h1>
+            <p class="lede" style="color:#475569">
+                We keep appointments, so you do not lose a lunch break in a queue.
+                Pick your service and a time, and it lands on the chair's WhatsApp
+                instantly. Walk-ins still welcome.
+            </p>
+            <div class="shop-strip">
+                <span class="chip">Open daily 8am - 8pm</span>
+                <span class="chip">Four chairs, two therapists</span>
+                <span class="chip">M-Pesa accepted</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap grid2">
+            <div>
+                <div class="section-head">
+                    <h2>Prices</h2>
+                    <p>No hidden charges. The price you read is the price at the chair.</p>
+                </div>
+                <ul class="price-list">
+                    <li><span>Haircut, machine or scissor</span><strong>KSh 400</strong></li>
+                    <li><span>Shave with hot towel</span><strong>KSh 250</strong></li>
+                    <li><span>Beard trim and shape</span><strong>KSh 200</strong></li>
+                    <li><span>Kids cut, under 12</span><strong>KSh 250</strong></li>
+                    <li><span>Hair dye, black</span><strong>KSh 800</strong></li>
+                    <li><span>Manicure and pedicure</span><strong>KSh 900</strong></li>
+                    <li><span>Massage, 45 minutes</span><strong>KSh 1,800</strong></li>
+                    <li><span>Facial, deep clean</span><strong>KSh 1,500</strong></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="section-head">
+                    <h2>The room</h2>
+                    <p>Air conditioned, own generator, and a screen that does not play adverts.</p>
+                </div>
+                <div class="tile">
+                    <h3>What to expect</h3>
+                    <p>Sanitised tools per client, fresh towels, and a barber who asks before he starts cutting. Cards and M-Pesa both work.</p>
+                    <div class="shop-strip">
+                        <span class="chip">Own parking</span>
+                        <span class="chip">Wi-Fi</span>
+                        <span class="chip">Kids seating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="book">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>Book a chair</h2>
+                <p>Choose the service and when you want it. The message arrives with everything filled in.</p>
+            </div>
+
+            <form class="tile" id="bookForm" style="display:grid;gap:14px">
+                <label style="display:grid;gap:6px;font-size:0.88rem;font-weight:700">
+                    Service
+                    <select id="bService" style="padding:12px;border:1px solid #e2e8f0;border-radius:10px;font-size:1rem">
+                        <option>Haircut, machine or scissor, KSh 400</option>
+                        <option>Shave with hot towel, KSh 250</option>
+                        <option>Beard trim and shape, KSh 200</option>
+                        <option>Kids cut, under 12, KSh 250</option>
+                        <option>Hair dye, black, KSh 800</option>
+                        <option>Manicure and pedicure, KSh 900</option>
+                        <option>Massage, 45 minutes, KSh 1,800</option>
+                        <option>Facial, deep clean, KSh 1,500</option>
+                    </select>
+                </label>
+
+                <label style="display:grid;gap:6px;font-size:0.88rem;font-weight:700">
+                    Day and time
+                    <input id="bWhen" type="text" placeholder="e.g. Saturday 2pm" style="padding:12px;border:1px solid #e2e8f0;border-radius:10px;font-size:1rem">
+                </label>
+
+                <label style="display:grid;gap:6px;font-size:0.88rem;font-weight:700">
+                    Your name
+                    <input id="bName" type="text" placeholder="e.g. Brian" style="padding:12px;border:1px solid #e2e8f0;border-radius:10px;font-size:1rem">
+                </label>
+
+                <div class="actions" style="margin:0">
+                    <button class="btn btn-primary" type="submit">Book on WhatsApp</button>
+                    <a class="btn btn-ghost" href="tel:+254703511022">Call instead</a>
+                </div>
+                <p class="tiny" id="bookNote" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <section class="wrap">
+        <div class="contact" style="background:#7c2d12">
+            <h2>First time here?</h2>
+            <p>Ask for the first-visit price on the cut and the shave together. It is cheaper than taking them separately.</p>
+            <div class="actions" style="margin:0">
+                <a class="btn btn-primary" href="https://wa.me/254703511022?text=Hi%20Glow%2C%20it%20is%20my%20first%20time%2C%20what%20is%20the%20first%20visit%20price%3F" target="_blank" rel="noopener">Ask on WhatsApp</a>
+                <a class="btn btn-ghost" href="index.html">Get a site like this</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site">
+    <div class="wrap">Sample business built by Laban · WhatsApp 0703 511 022 · This salon is fictional, the booking flow is real.</div>
+</footer>
+
+<script src="assets/booking.js" defer></script>
+</body>
+</html>

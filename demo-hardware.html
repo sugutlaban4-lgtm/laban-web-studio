@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mwangaza Hardware - sample site by Laban</title>
+<meta name="description" content="Sample small business website: price list, WhatsApp ordering and location for a hardware shop.">
+<meta name="theme-color" content="#1c1917">
+<link rel="stylesheet" href="assets/studio.css">
+</head>
+<body>
+
+<p class="demo-banner">
+    Sample site. This is a made-up shop, built to show what yours could look like.
+    <a href="index.html">See the offer &rarr;</a>
+</p>
+
+<header class="shop-top">
+    <div class="wrap bar-in">
+        <span class="mark" aria-hidden="true">MH</span>
+        <span class="bar-name">Mwangaza Hardware<small>Kikuyu Town · since 2011</small></span>
+        <a class="btn btn-primary" style="margin-left:auto;background:#f59e0b;color:#1c1917" href="https://wa.me/254703511022?text=Hi%20Mwangaza%20Hardware%2C%20I%20want%20to%20ask%20about..." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+</header>
+
+<main>
+
+    <section class="shop-hero">
+        <div class="wrap">
+            <h1>Building materials and tools, priced before you come.</h1>
+            <p class="lede" style="color:#475569">
+                Cement, iron sheets, paint, plumbing and every small thing a
+                fundi forgets. Pick what you need on this page and it reaches our
+                WhatsApp as a ready list, so we reserve it before you travel.
+            </p>
+            <div class="shop-strip">
+                <span class="chip">Open Mon to Sat, 7am to 6pm</span>
+                <span class="chip">Delivery within Kikuyu, KSh 300</span>
+                <span class="chip">M-Pesa accepted</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>Pick what you need</h2>
+                <p>Tick the items and send the list. We reply with the total and how long it takes to load.</p>
+            </div>
+
+            <div class="catalog" id="catalog">
+                <label><input type="checkbox" data-name="Cement 50kg (Bamburi)" data-price="800"> Cement 50kg<span class="p">KSh 800</span></label>
+                <label><input type="checkbox" data-name="Iron sheet 30g, 3m" data-price="1150"> Iron sheet 30g, 3m<span class="p">KSh 1,150</span></label>
+                <label><input type="checkbox" data-name="Paint 4L (Crown, white)" data-price="2400"> Paint 4L, white<span class="p">KSh 2,400</span></label>
+                <label><input type="checkbox" data-name="Nails 1kg assorted" data-price="180"> Nails 1kg assorted<span class="p">KSh 180</span></label>
+                <label><input type="checkbox" data-name="Wheelbarrow heavy duty" data-price="3200"> Wheelbarrow<span class="p">KSh 3,200</span></label>
+                <label><input type="checkbox" data-name="PVC pipe 1/2 inch, 6m" data-price="450"> PVC pipe 1/2 inch<span class="p">KSh 450</span></label>
+                <label><input type="checkbox" data-name="Padlock 50mm" data-price="350"> Padlock 50mm<span class="p">KSh 350</span></label>
+                <label><input type="checkbox" data-name="Claw hammer" data-price="700"> Claw hammer<span class="p">KSh 700</span></label>
+            </div>
+
+            <div class="order-total">
+                <span id="orderCount">Nothing picked yet</span>
+                <span id="orderSum">KSh 0</span>
+            </div>
+
+            <div class="actions" style="margin-top:14px">
+                <button class="btn btn-primary" id="orderBtn" type="button">Send this list on WhatsApp</button>
+                <a class="btn btn-ghost" href="tel:+254703511022">Call the shop</a>
+            </div>
+            <p class="tiny" id="orderNote" role="status" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap grid2">
+            <div class="tile">
+                <h3>Where we are</h3>
+                <p>Mwangaza Hardware, opposite the Kikuyu stage, next to the petrol station. Free parking in front.</p>
+                <div class="shop-strip">
+                    <span class="chip">Kikuyu Town</span>
+                    <span class="chip">Opposite the stage</span>
+                </div>
+            </div>
+            <div class="tile">
+                <h3>Opening hours</h3>
+                <ul class="hours">
+                    <li><span>Monday to Friday</span><span>7:00am - 6:00pm</span></li>
+                    <li><span>Saturday</span><span>7:00am - 4:00pm</span></li>
+                    <li><span>Sunday</span><span>Closed</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrap">
+        <div class="contact">
+            <h2>Not sure what to buy?</h2>
+            <p>Send a photo of the job and we will tell you what it needs and what it costs. Cheaper than buying twice.</p>
+            <div class="actions" style="margin:0">
+                <a class="btn btn-primary" href="https://wa.me/254703511022?text=Hi%20Mwangaza%20Hardware%2C%20here%20is%20a%20photo%20of%20the%20job%2C%20what%20do%20I%20need%3F" target="_blank" rel="noopener">Send a photo</a>
+                <a class="btn btn-ghost" href="index.html">Get a site like this</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site">
+    <div class="wrap">Sample business built by Laban · WhatsApp 0703 511 022 · This shop is fictional, the ordering flow is real.</div>
+</footer>
+
+<script src="assets/order.js" defer></script>
+</body>
+</html>
