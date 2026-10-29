@@ -11,6 +11,15 @@
 
     if (!plan.length || !list) return;
 
+    /* The plan starts on Friday 30 October 2026, one post a day. */
+    const START = new Date(2026, 9, 30);
+
+    function dateFor(day) {
+        const d = new Date(START.getTime());
+        d.setDate(d.getDate() + (day - 1));
+        return d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
+    }
+
     const seen = new Set(JSON.parse(localStorage.getItem("lsh_posted") || "[]"));
 
     let week = "all";
@@ -127,7 +136,7 @@
 
         const top = document.createElement("div");
         top.className = "post-top";
-        top.innerHTML = "<span>Day " + item.day + "</span><span>·</span><span>" + item.time + "</span><span>·</span><span class='plat'>" + item.platform + "</span>";
+        top.innerHTML = "<span>Day " + item.day + "</span><span>·</span><span class='date'>" + dateFor(item.day) + "</span><span>·</span><span>" + item.time + "</span><span>·</span><span class='plat'>" + item.platform + "</span>";
 
         const title = document.createElement("h2");
         title.textContent = item.title;
@@ -139,6 +148,21 @@
         const tags = document.createElement("p");
         tags.className = "tags";
         tags.textContent = item.tags;
+
+        let scriptBlock = null;
+        if (Array.isArray(item.script) && item.script.length) {
+            scriptBlock = document.createElement("details");
+            scriptBlock.className = "script";
+            const summary = document.createElement("summary");
+            summary.textContent = "TikTok script (" + item.script.length + " beats)";
+            const ol = document.createElement("ol");
+            item.script.forEach(beat => {
+                const li = document.createElement("li");
+                li.textContent = beat;
+                ol.appendChild(li);
+            });
+            scriptBlock.append(summary, ol);
+        }
 
         const row = document.createElement("div");
         row.className = "row";
@@ -172,7 +196,9 @@
         });
 
         row.append(copyBtn, imgBtn, doneBtn);
-        post.append(top, title, cap, tags, row, note);
+        post.append(top, title, cap, tags);
+        if (scriptBlock) post.appendChild(scriptBlock);
+        post.append(row, note);
         return post;
     }
 

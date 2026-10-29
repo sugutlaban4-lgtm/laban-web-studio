@@ -20,7 +20,14 @@ window.LSH_SOCIAL_PLAN = [
         day: 3, week: 1, platform: "TikTok", time: "7:30pm",
         title: "15 second trick: completing the square",
         caption: "Text on screen: 'x squared plus 6x plus 2. Half the 6, square it, subtract it.' Show the three lines of working, then 'full topic in the app, link in bio'.",
-        tags: "#maths #KCSE #learnontiktok"
+        tags: "#maths #KCSE #learnontiktok",
+        script: [
+            "ON SCREEN: x squared + 6x + 2. Watch.",
+            "SAY: take the 6, half it to 3, square it to 9, then add and subtract 9.",
+            "ON SCREEN: (x + 3) squared minus 7. Underline the minus 7.",
+            "SAY: that is completing the square. Three seconds of clever work, no formula to memorise.",
+            "END CARD: Full topic free in the app.",
+        ]
     },
     {
         day: 4, week: 1, platform: "WhatsApp Status", time: "12:30pm",
@@ -52,7 +59,14 @@ window.LSH_SOCIAL_PLAN = [
         day: 8, week: 2, platform: "TikTok", time: "7:30pm",
         title: "Where Paper 1 marks actually go",
         caption: "Screen list: Section A short questions are 30 marks and people lose them by not showing method. 'Marks are for working, not answers.' Full paper walkthrough in the app.",
-        tags: "#KCSE #maths"
+        tags: "#KCSE #maths",
+        script: [
+            "ON SCREEN: a Paper 1 question with [3] marks showing.",
+            "SAY: people lose these not because they cannot do it, but because they write only the answer.",
+            "ON SCREEN: same question answered with one line of working per mark.",
+            "SAY: one line of working per mark. Three marks, three lines. That is the whole trick.",
+            "END CARD: Paper walkthroughs in the app.",
+        ]
     },
     {
         day: 9, week: 2, platform: "Facebook", time: "1:00pm",
@@ -70,7 +84,14 @@ window.LSH_SOCIAL_PLAN = [
         day: 11, week: 2, platform: "TikTok", time: "8:00pm",
         title: "Mole shortcut",
         caption: "Screen: 'grams divided by molar mass equals moles.' Then one worked example with potassium permanganate. Caption: 'The whole of chemistry chapter 3 starts here.'",
-        tags: "#chemistry #mole #KCSE"
+        tags: "#chemistry #mole #KCSE",
+        script: [
+            "ON SCREEN: grams divided by molar mass equals moles.",
+            "SAY: moles is a counting unit, not a weight. Grams and molar mass just convert you into it.",
+            "ON SCREEN: 40 grams of NaOH, molar mass 40, so one mole.",
+            "SAY: that is one mole. Now every mole question is the same question.",
+            "END CARD: Chemistry topics in the app.",
+        ]
     },
     {
         day: 12, week: 2, platform: "Facebook", time: "9:00am",
@@ -131,7 +152,7 @@ window.LSH_SOCIAL_PLAN = [
     {
         day: 21, week: 3, platform: "WhatsApp Status", time: "9:00am",
         title: "Closes 4 December",
-        caption: "One week to the deadline. After 4 December I stop taking names so the first topic can go out on time to everyone. [course link]",
+        caption: "Deadline is 4 December. After that I stop taking names so the first topic can go out on time to everyone. Places go to whoever asks first. [course link]",
         tags: "#KCSE #december"
     },
 
@@ -152,7 +173,14 @@ window.LSH_SOCIAL_PLAN = [
         day: 24, week: 4, platform: "TikTok", time: "8:00pm",
         title: "Behind the marking",
         caption: "Show a photo of a marked script with the ticks and the note in the margin. Caption: 'This is what 9pm looks like in December. Thirty scripts a night.'",
-        tags: "#KCSE #behindthescenes"
+        tags: "#KCSE #behindthescenes",
+        script: [
+            "ON SCREEN: a marked script, ticks in the margin, dark room, lamp light.",
+            "SAY: this is what nine at night looks like in December. Thirty scripts, every night.",
+            "ON SCREEN: a margin note reading show method here for 2 marks.",
+            "SAY: and this is why people improve. Not the lesson. The marking.",
+            "END CARD: December course, link in bio.",
+        ]
     },
     {
         day: 25, week: 4, platform: "Facebook", time: "9:00am",
@@ -169,7 +197,7 @@ window.LSH_SOCIAL_PLAN = [
     {
         day: 27, week: 4, platform: "WhatsApp Status", time: "6:45am",
         title: "Final call",
-        caption: "Today is the last day. If you have been meaning to, this is the message. Send your name, school and subject and I will send the payment steps.",
+        caption: "If you have been meaning to, this is the message. Send your name, school and subject and I will send the payment steps. When the group is full I close it, 4 December or earlier.",
         tags: "#KCSE #december"
     },
     {
