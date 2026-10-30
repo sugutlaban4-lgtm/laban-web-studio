@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reply pad - answers for parents, students and clients</title>
+<meta name="description" content="Ready answers for parents, students and clients, written for chatting on WhatsApp, Messenger, Instagram, TikTok or SMS.">
+<meta name="theme-color" content="#0f172a">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="manifest-reply.json">
+<link rel="icon" href="assets/qr-studio.svg">
+<style>
+    :root {
+        --ink: #0f172a;
+        --ink-soft: #475569;
+        --line: #e2e8f0;
+        --bg: #ffffff;
+        --bg-soft: #f8fafc;
+        --accent: #0d9488;
+        --accent-soft: #ccfbf1;
+        --ok: #15803d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    header.pad-head {
+        background: linear-gradient(150deg, #0f172a, #134e4a);
+        color: #fff;
+        padding: 22px 18px 18px;
+    }
+
+    .pad-head h1 {
+        margin: 0 0 6px;
+        font-size: 1.45rem;
+        letter-spacing: -0.02em;
+    }
+
+    .pad-head p {
+        margin: 0;
+        color: #d3e4e2;
+        font-size: 0.92rem;
+        max-width: 46ch;
+    }
+
+    .pad-tools {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        padding: 10px 18px;
+    }
+
+    .pad-search {
+        width: 100%;
+        padding: 11px 13px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        font-size: 0.95rem;
+        font-family: inherit;
+        color: var(--ink);
+        background: var(--bg-soft);
+    }
+
+    .pad-search:focus {
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+        background: #fff;
+    }
+
+    .pad-chips {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 10px 0 2px;
+        scrollbar-width: none;
+    }
+
+    .pad-chips::-webkit-scrollbar { display: none; }
+
+    .pad-chip {
+        flex: none;
+        padding: 7px 13px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--ink-soft);
+        font-size: 0.85rem;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+    }
+
+    .pad-chip[aria-pressed="true"] {
+        background: var(--ink);
+        border-color: var(--ink);
+        color: #fff;
+    }
+
+    main.pad-main {
+        padding: 14px 18px 40px;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .pad-count {
+        margin: 0 0 12px;
+        font-size: 0.82rem;
+        color: var(--ink-soft);
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .scenario {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px;
+        margin-bottom: 12px;
+        background: #fff;
+    }
+
+    .scenario-who {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: var(--accent-soft);
+        border-radius: 999px;
+        padding: 3px 9px;
+        margin-bottom: 8px;
+    }
+
+    .scenario-ask {
+        margin: 0 0 12px;
+        font-size: 1.02rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+    }
+
+    .reply {
+        border-top: 1px dashed var(--line);
+        padding-top: 10px;
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .reply p {
+        margin: 0;
+        flex: 1;
+        font-size: 0.94rem;
+        color: #1f2937;
+    }
+
+    .copy {
+        flex: none;
+        border: 1px solid var(--line);
+        background: var(--bg-soft);
+        color: var(--ink);
+        border-radius: 9px;
+        padding: 7px 11px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        font-family: inherit;
+        cursor: pointer;
+    }
+
+    .copy.is-done {
+        background: var(--ok);
+        border-color: var(--ok);
+        color: #fff;
+    }
+
+    .tip {
+        margin: 4px 0 16px;
+        padding: 12px 14px;
+        border-radius: 12px;
+        background: var(--bg-soft);
+        border: 1px solid var(--line);
+        font-size: 0.87rem;
+        color: var(--ink-soft);
+    }
+
+    .tip strong { color: var(--ink); }
+
+    .empty {
+        padding: 26px 0;
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+    }
+
+    footer.pad-foot {
+        padding: 0 18px 34px;
+        max-width: 720px;
+        margin: 0 auto;
+        font-size: 0.85rem;
+        color: var(--ink-soft);
+    }
+
+    footer.pad-foot a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="pad-head">
+    <h1>Reply pad</h1>
+    <p>Tap the message you got, copy the answer, paste it in WhatsApp, Messenger, Instagram, TikTok, X or SMS.</p>
+</header>
+
+<div class="pad-tools">
+    <input id="search" class="pad-search" type="search" placeholder="Search a message, e.g. expensive, paid, group" aria-label="Search messages">
+    <div class="pad-chips" role="group" aria-label="Filter by person">
+        <button class="pad-chip" type="button" data-filter="all" aria-pressed="true">Everything</button>
+        <button class="pad-chip" type="button" data-filter="Parent" aria-pressed="false">Parents</button>
+        <button class="pad-chip" type="button" data-filter="Student" aria-pressed="false">Students</button>
+        <button class="pad-chip" type="button" data-filter="Client" aria-pressed="false">Clients</button>
+        <button class="pad-chip" type="button" data-filter="swahili" aria-pressed="false">Swahili</button>
+    </div>
+</div>
+
+<main class="pad-main">
+    <p class="pad-count" id="count"></p>
+    <div class="tip">
+        <strong>Use it beside any app.</strong> Open this page, then split the screen: on Android, open your chats, swipe up and hold this page. Or tap the browser menu and choose <em>Add to home screen</em> so it opens like an app, and it keeps working without data.
+    </div>
+    <div id="list"></div>
+</main>
+
+<footer class="pad-foot">
+    <p>Written for Laban. Change any wording that does not sound like you. Support line: <a href="https://wa.me/254703511022">0703 511 022</a>.</p>
+</footer>
+
+<script src="assets/reply-pad.js"></script>
+<script src="assets/reply-pad-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "name": "Reply pad",
+    "short_name": "Reply pad",
+    "description": "Ready answers for parents, students and clients in any chat app.",
+    "start_url": "./reply-pad.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0f172a",
+    "icons": [
+        {
+            "src": "./assets/qr-studio.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}
